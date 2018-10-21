@@ -23,7 +23,9 @@ const navToggle = document.getElementById("nav-toggle");
 const pageWrap = document.getElementById("pagewrap");
 
 var sf = 45;
-var austin = 30;
+var austin = 20;
+var charlotte = 8;
+var denver = 10;
 let chart2 = new Chart(chart2el, {
     type: 'bar',
     data: {
@@ -99,6 +101,10 @@ var lastval = 1;
 slider.oninput = function() {
     // output.innerHTML = this.value;
     var sfsaving = parseInt($('#sfsaving').text());
+        var austinsaving = parseInt($('#austinsaving').text());
+    var charlottesaving = parseInt($('#charlottesaving').text());
+    var denversaving = parseInt($('#denversaving').text());
+
     var currentVal = this.value;
     if (currentVal == 1) {
         currentCar.src = "img/car/uber.jpg";
@@ -106,8 +112,14 @@ slider.oninput = function() {
         if(lastval > 1)
         {
           $('#sfsaving').text(sfsaving + 1000);  
+          $('#austinsaving').text(austinsaving + 1000);  
+          $('#charlottesaving').text(charlottesaving + 1000);  
+          $('#denversaving').text(denversaving + 1000);  
+
           sf = sf  - 1;
           austin = sf  - 1;
+          charlotte = charlotte - 1;
+          denver = denver - 1;
         }
         lastval = currentVal;
     } else if (currentVal == 2) {
@@ -116,14 +128,27 @@ slider.oninput = function() {
         if(lastval < 2)
         {
           $('#sfsaving').text(sfsaving - 1000);
+          $('#austinsaving').text(austinsaving - 1000);  
+          $('#charlottesaving').text(charlottesaving - 1000);  
+                    $('#denversaving').text(denversaving -1000);  
+
           sf = sf  + 1; 
           austin = sf  + 1;
+          charlotte = charlotte + 1; 
+                    denver = denver + 1;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 5000); 
+         $('#austinsaving').text(austinsaving + 5000);  
+         $('#charlottesaving').text(charlottesaving + 5000);  
+                   $('#denversaving').text(denversaving + 5000);  
+
          sf = sf  - 5;
          austin = sf  - 5;
+         charlotte = charlotte - 5;
+                   denver = denver - 5;
+
         }
         lastval = currentVal;
     } else if (currentVal == 3) {
@@ -132,14 +157,28 @@ slider.oninput = function() {
         if(lastval < 3)
         {
           $('#sfsaving').text(sfsaving - 5000);
+          $('#austinsaving').text(austinsaving - 5000);  
+                   $('#charlottesaving').text(charlottesaving - 5000);  
+          $('#denversaving').text(denversaving - 5000);  
+
           sf = sf  + 5;
           austin = sf  + 5;
+          charlotte = charlotte + 5;
+            denver = denver + 5;
+
         }
         else
         {
          $('#sfsaving').text(sfsaving + 10000); 
+         $('#austinsaving').text(austinsaving + 10000);  
+                  $('#charlottesaving').text(charlottesaving + 10000);  
+          $('#denversaving').text(denversaving + 10000);  
+
          sf = sf  - 10;
          austin = sf  - 10;
+         charlotte = charlotte - 10;
+          denver = denver - 10;
+
         }
         lastval = currentVal;
 
@@ -149,22 +188,42 @@ slider.oninput = function() {
         if(lastval < 4)
         {
           $('#sfsaving').text(sfsaving - 10000);
+          $('#austinsaving').text(austinsaving - 10000);  
+                   $('#charlottesaving').text(charlottesaving - 10000);  
+          $('#denversaving').text(denversaving - 10000);  
+
           sf = sf  + 10;
           austin = sf  + 10;
+          charlotte = charlotte + 10;
+                    denver = denver + 10;
+
         }
         else
         {
          $('#sfsaving').text(sfsaving + 20000); 
+         $('#austinsaving').text(austinsaving + 20000);  
+                  $('#charlottesaving').text(charlottesaving + 20000);  
+          $('#denversaving').text(denversaving + 20000);  
+
          sf = sf  - 20;
          austin = sf  - 20;
+         charlotte = charlotte - 20;
+                   denver = denver - 20;
+
         }
         lastval = currentVal;
     } else {
         currentCar.src = "img/car/lambo.jpg";
         output.innerHTML = "Lamborghini";
         $('#sfsaving').text(sfsaving - 20000);
+                 $('#charlottesaving').text(charlottesaving - 20000);  
+          $('#denversaving').text(denversaving - 20000);  
+
         sf = sf  + 20;
         austin = sf  + 20;
+        charlotte = charlotte + 20;
+                  denver = denver + 20;
+
         lastval = currentVal;
     }
     
@@ -173,6 +232,12 @@ slider.oninput = function() {
 
     chart2Austin.data.datasets[1].data = [austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin];
     chart2Austin.update();
+
+    chart2Charlotte.data.datasets[1].data = [charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte];
+    chart2Charlotte.update();
+
+    chart2Denver.data.datasets[1].data = [denver, denver, denver, denver, denver, denver, denver, denver, denver, denver, denver, denver];
+    chart2Denver.update();
 }
 
 //home
@@ -185,7 +250,9 @@ slider2.oninput = function() {
     // output2.innerHTML = this.value;
     var currentVal = this.value;
     var sfsaving = parseInt($('#sfsaving').text());
-
+    var austinsaving = parseInt($('#austinsaving').text());
+    var charlottesaving = parseInt($('#charlottesaving').text());
+    var denversaving = parseInt($('#denversaving').text());
     console.log(currentVal);
     if (currentVal == 1) {
         currentHome.src = "img/home/street.jpg";
@@ -193,8 +260,13 @@ slider2.oninput = function() {
         if(lastval2 > 1)
         {
           $('#sfsaving').text(sfsaving + 25000);  
+          $('#austinsaving').text(austinsaving + 8000);  
+          $('#charlottesaving').text(charlottesaving + 6000);  
+          $('#denversaving').text(denversaving + 5000);  
                     sf = sf  - 15;
                     austin = austin  - 8;
+          charlotte = charlotte - 6;
+          denver = denver - 5;
 
         }
     } else if (currentVal == 2) {
@@ -203,14 +275,27 @@ slider2.oninput = function() {
         if(lastval2 < 2)
         {
           $('#sfsaving').text(sfsaving - 25000);
+          $('#austinsaving').text(austinsaving - 8000);  
+          $('#charlottesaving').text(charlottesaving - 6000);
+          $('#denversaving').text(denversaving - 5000);  
+
           sf = sf  + 15;
           austin = austin  + 8;
+        charlotte = charlotte + 6;
+                  denver = denver + 5;
+
         }
         else
         {
          $('#sfsaving').text(sfsaving + 15000); 
+         $('#austinsaving').text(austinsaving + 10000);  
+         $('#charlottesaving').text(charlottesaving + 6000);
+         $('#denversaving').text(denversaving + 5000);  
          sf = sf  - 15;
          austin = austin  - 10;
+          charlotte = charlotte - 6;
+                    denver = denver - 5;
+
         }
     } else if (currentVal == 3) {
         currentHome.src = "img/home/1bedroom.jpg";
@@ -218,14 +303,27 @@ slider2.oninput = function() {
         if(lastval2 < 3)
         {
           $('#sfsaving').text(sfsaving - 15000);
+          $('#austinsaving').text(austinsaving - 10000); 
+          $('#charlottesaving').text(charlottesaving - 6000); 
+                   $('#denversaving').text(denversaving - 6000);  
+
           sf = sf  + 15;
           austin = austin  + 10;
+                   charlotte = charlotte + 6;
+                             denver = denver + 5;
+
         }
         else
         {
          $('#sfsaving').text(sfsaving + 25000); 
+         $('#austinsaving').text(austinsaving + 15000);  
+         $('#charlottesaving').text(charlottesaving + 10000);
+         $('#denversaving').text(denversaving + 12000);  
          sf = sf  - 25;
          austin = austin  - 15;
+                  charlotte = charlotte - 10;
+                            denver = denver - 12;
+
         }
     } else if (currentVal == 4) {
         currentHome.src = "img/home/home.jpg";
@@ -233,21 +331,39 @@ slider2.oninput = function() {
         if(lastval2 < 4)
         {
           $('#sfsaving').text(sfsaving - 25000);
+          $('#austinsaving').text(austinsaving - 15000);  
+          $('#charlottesaving').text(charlottesaving - 10000);
+          $('#denversaving').text(denversaving - 12000);  
           sf = sf  + 25;
           austin = austin  + 15;
+                   charlotte = charlotte + 10;
+                             denver = denver + 12;
+
         }
         else
         {
          $('#sfsaving').text(sfsaving + 100000); 
+         $('#austinsaving').text(austinsaving + 50000);  
+         $('#charlottesaving').text(charlottesaving + 35000);
+         $('#denversaving').text(denversaving + 40000);  
          sf = sf  - 100;
          austin = austin  - 50;
+                  charlotte = charlotte - 35;
+                            denver = denver - 40;
+
         }
     } else {
         currentHome.src = "img/home/mansion.jpg";
         output2.innerHTML = "Mansion";
         $('#sfsaving').text(sfsaving - 100000);
+        $('#austinsaving').text(austinsaving - 50000); 
+        $('#charlottesaving').text(charlottesaving - 35000); 
+        $('#denversaving').text(denversaving - 40000);
         sf = sf  + 100;
         austin = austin  + 50;
+                 charlotte = charlotte + 35;
+                           denver = denver + 40;
+
     }
             lastval2 = currentVal;
 
@@ -256,5 +372,11 @@ slider2.oninput = function() {
 
     chart2Austin.data.datasets[1].data = [austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin];
     chart2Austin.update();
+
+    chart2Charlotte.data.datasets[1].data = [charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte, charlotte];
+    chart2Charlotte.update();
+
+    chart2Denver.data.datasets[1].data = [denver, denver, denver, denver, denver, denver, denver, denver, denver, denver, denver, denver];
+    chart2Denver.update();
 }
 

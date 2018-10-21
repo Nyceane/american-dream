@@ -17,7 +17,7 @@ let chart2Austin = new Chart(chart2elAustin, {
         {
             label: "Spending",
             backgroundColor: ["red","red","red","red","red","red","red","red","red","red","red","red"],
-            data: [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+            data: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
         },
         {
             label: "Spending",
