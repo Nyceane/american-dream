@@ -24,7 +24,7 @@
         /* Always set the map height explicitly to define the size of the div
             * element that contains the map. */
         #map {
-            height: 800px;
+            height: 400px;
             position: unset;
         }
         /* Optional: Makes the sample page fill the window. */
@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
 
-                                <div class="san-francisco">
+                                <div class="san-francisco data">
                                     <div class="row mt-3">
                                         <div class="col-6">
                                             <a href="" data-target="#360modal-sanfran" id="3jsModal" data-toggle="modal">
@@ -192,7 +192,7 @@
                                 </div>
                                 <!-- san-francisco ends -->
 
-                                <div class="denver d-none">
+                                <div class="denver data">
                                     <div class="row mt-3">
                                         <div class="col-6">
                                             <a href="" data-target="#360modal-denver" id="3jsModal" data-toggle="modal">
@@ -268,7 +268,7 @@
                                 </div>
                                 <!-- denver ends -->
 
-                                <div class="charlotte d-none">
+                                <div class="charlotte data">
                                     <div class="row mt-3">
                                         <div class="col-6">
                                             <a href="" data-target="#360modal-charlotte" id="3jsModal" data-toggle="modal">
@@ -344,7 +344,7 @@
                                 </div>
                                 <!-- charlotte ends -->
 
-                                <div class="austin d-none">
+                                <div class="austin data">
                                     <div class="row mt-3">
                                         <div class="col-6">
                                             <a href="" data-target="#360modal-austin" id="3jsModal" data-toggle="modal">
@@ -420,7 +420,11 @@
                                 </div>
                                 <!-- austin ends -->
 
-
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
 
 
                                 <div class="row">
@@ -453,12 +457,6 @@
                                                 <h6 class=""><strong>4 months to go</strong></h6>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="map"></div>
                                     </div>
                                 </div>
                             
@@ -603,113 +601,139 @@
     <script src="js/chart-austin.js"></script>
     <script src="js/chart-charlotte.js"></script>
     <script src="js/chart-denver.js"></script>
-    <script src="js/chart-san fran.js"></script>
     <script>
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 5,
-            center: new google.maps.LatLng(39.911669, -101.617370),
-            mapTypeId: 'roadmap'
+                zoom: 5,
+                center: new google.maps.LatLng(39.911669, -101.617370),
+                mapTypeId: 'roadmap'
             });
     
             var iconBase = '';
             var icons = {
-            dream1: {
-                icon: iconBase + 'img/friends/dream_1.png'
-            },
-            dream2: {
-                icon: iconBase + 'img/friends/dream_2.png'
-            },
-            dream3: {
-                icon: iconBase + 'img/friends/dream_3.png'
-            },
-            dream4: {
-                icon: iconBase + 'img/friends/dream_4.png'
-            },
-            dream5: {
-                icon: iconBase + 'img/friends/dream_5.png'
-            },
-            dream6: {
-                icon: iconBase + 'img/friends/dream_6.png'
-            },
-            dream7: {
-                icon: iconBase + 'img/friends/dream_7.png'
-            },
-            dream8: {
-                icon: iconBase + 'img/friends/dream_8.png'
-            },
-            dream9: {
-                icon: iconBase + 'img/friends/dream_9.png'
-            },
-            dream10: {
-                icon: iconBase + 'img/friends/dream_10.png'
-            },
-            dream11: {
-                icon: iconBase + 'img/friends/dream_11.png'
-            }
+                dream1: {
+                    icon: iconBase + 'img/friends/dream_1.png'
+                },
+                dream2: {
+                    icon: iconBase + 'img/friends/dream_2.png'
+                },
+                dream3: {
+                    icon: iconBase + 'img/friends/dream_3.png'
+                },
+                dream4: {
+                    icon: iconBase + 'img/friends/dream_4.png'
+                },
+                dream5: {
+                    icon: iconBase + 'img/friends/dream_5.png'
+                },
+                dream6: {
+                    icon: iconBase + 'img/friends/dream_6.png'
+                },
+                dream7: {
+                    icon: iconBase + 'img/friends/dream_7.png'
+                },
+                dream8: {
+                    icon: iconBase + 'img/friends/dream_8.png'
+                },
+                dream9: {
+                    icon: iconBase + 'img/friends/dream_9.png'
+                },
+                dream10: {
+                    icon: iconBase + 'img/friends/dream_10.png'
+                },
+                dream11: {
+                    icon: iconBase + 'img/friends/dream_11.png'
+                }
             };
     
             var features = [
-            {
-                position: new google.maps.LatLng(37.9379474,-122.3476049),
-                type: 'dream2'
-            },
-            {
-                position: new google.maps.LatLng(47.6131746,-122.4821462),
-                type: 'dream1'
-            },
-            {
-                position: new google.maps.LatLng(34.2060699,-117.6976715),
-                type: 'dream3'
-            },
-                        {
-                position: new google.maps.LatLng(39.2895812,-103.4673934),
-                type: 'dream4'
-            },
-            {
-                position: new google.maps.LatLng(30.17328,-97.7545593),
-                type: 'dream5'
-            },
-            {
-                position: new google.maps.LatLng(35.5179843,-80.9598127),
-                type: 'dream6'
-            },
-            {
-                position: new google.maps.LatLng(40.3095145,-75.2586236),
-                type: 'dream7'
-            },
-            {
-                position: new google.maps.LatLng(25.8875423,-80.297985),
-                type: 'dream8'
-            },
-            {
-                position: new google.maps.LatLng(41.8339037,-87.8720462),
-                type: 'dream9'
-            },
-            {
-                position: new google.maps.LatLng(40.7008945,-84.4092824),
-                type: 'dream10'
-            },
-            {
-                position: new google.maps.LatLng(29.296801,-88.4669784),
-                type: 'dream11'
-            },
+                {
+                    position: new google.maps.LatLng(37.9379474,-122.3476049),
+                    type: 'dream2'
+                },
+                {
+                    position: new google.maps.LatLng(47.6131746,-122.4821462),
+                    type: 'dream1'
+                },
+                {
+                    position: new google.maps.LatLng(34.2060699,-117.6976715),
+                    type: 'dream3'
+                },
+                            {
+                    position: new google.maps.LatLng(39.2895812,-103.4673934),
+                    type: 'dream4'
+                },
+                {
+                    position: new google.maps.LatLng(30.17328,-97.7545593),
+                    type: 'dream5'
+                },
+                {
+                    position: new google.maps.LatLng(35.5179843,-80.9598127),
+                    type: 'dream6'
+                },
+                {
+                    position: new google.maps.LatLng(40.3095145,-75.2586236),
+                    type: 'dream7'
+                },
+                {
+                    position: new google.maps.LatLng(25.8875423,-80.297985),
+                    type: 'dream8'
+                },
+                {
+                    position: new google.maps.LatLng(41.8339037,-87.8720462),
+                    type: 'dream9'
+                },
+                {
+                    position: new google.maps.LatLng(40.7008945,-84.4092824),
+                    type: 'dream10'
+                },
+                {
+                    position: new google.maps.LatLng(29.296801,-88.4669784),
+                    type: 'dream11'
+                },
             ];
-    
+
+            setTimeout(function() {
+                $('.denver.data').addClass('d-none');
+                $('.austin.data').addClass('d-none');
+                $('.charlotte.data').addClass('d-none');
+            }, 1500);
+
     
     
             // Create markers.
             features.forEach(function(feature) {
-            var marker = new google.maps.Marker({
-                position: feature.position,
-                icon: icons[feature.type].icon,
-                map: map
-            });
-    
-            marker.addListener('click', function() {
-                alert(marker.icon);
-            });
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map
+                });
+        
+                marker.addListener('click', function() {
+                    // alert(marker.icon);
+                    if (marker.icon == "img/friends/dream_4.png") { // denver
+                        $('.denver.data').removeClass('d-none');
+                        $('.san-francisco.data').addClass('d-none');
+                        $('.austin.data').addClass('d-none');
+                        $('.charlotte.data').addClass('d-none');
+                    } else if (marker.icon == "img/friends/dream_2.png") { // san fran
+                        $('.denver.data').addClass('d-none');
+                        $('.san-francisco.data').removeClass('d-none');
+                        $('.austin.data').addClass('d-none');
+                        $('.charlotte.data').addClass('d-none');
+                    } else if (marker.icon == "img/friends/dream_5.png") { // austin
+                        $('.denver.data').addClass('d-none');
+                        $('.san-francisco.data').addClass('d-none');
+                        $('.austin.data').removeClass('d-none');
+                        $('.charlotte.data').addClass('d-none');
+                    } else if (marker.icon == "img/friends/dream_6.png") { // charlotte
+                        $('.denver.data').addClass('d-none');
+                        $('.san-francisco.data').addClass('d-none');
+                        $('.austin.data').addClass('d-none');
+                        $('.charlotte.data').removeClass('d-none');
+                    }
+                });
             });
         }
     </script>
