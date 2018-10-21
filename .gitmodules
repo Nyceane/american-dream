@@ -1,0 +1,3 @@
+[submodule "yodlee-app"]
+	path = yodlee-app
+	url = https://github.com/amirhyoussefi/yodlee-app
