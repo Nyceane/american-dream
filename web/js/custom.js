@@ -6,9 +6,10 @@ $(function () {
   })
 })
 
- $(document).ready(function(){
-        $('.dropdown-toggle').dropdown()
-    });
+$(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+
+});
 
 
 
@@ -183,16 +184,57 @@ function toggleMenu() {
 // slider
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+output.innerHTML = "Walking and Shared Rides";
 
+var currentCar = document.getElementById("lifestyle-car");
+var currentHome = document.getElementById("lifestyle-home");
+
+//car
 slider.oninput = function() {
-  output.innerHTML = this.value;
+    // output.innerHTML = this.value;
+    var currentVal = this.value;
+    if (currentVal < 20) {
+        currentCar.src = "img/car/uber.jpg";
+        output.innerHTML = "Walking and Shared Rides";
+    } else if (currentVal >= 20 && currentVal < 50) {
+        currentCar.src = "img/car/toyota.jpg";
+        output.innerHTML = "Used Toyota Corolla";
+    } else if (currentVal >= 50 && currentVal < 80) {
+        currentCar.src = "img/car/prius.jpg";
+        output.innerHTML = "Prius";
+    } else if (currentVal >= 80 && currentVal < 90) {
+        currentCar.src = "img/car/bmw.jpg";
+        output.innerHTML = "BMW";
+    } else {
+        currentCar.src = "img/car/lambo.jpg";
+        output.innerHTML = "Lamborghini";
+    }
 }
 
+//home
 var slider2 = document.getElementById("myRange2");
 var output2 = document.getElementById("demo2");
-output2.innerHTML = slider2.value;
+output2.innerHTML = "Stay on the Street";
 
 slider2.oninput = function() {
-  output2.innerHTML = this.value;
+    // output2.innerHTML = this.value;
+    var currentVal = this.value;
+    console.log(currentVal);
+    if (currentVal < 20) {
+        currentHome.src = "img/home/street.jpg";
+        output2.innerHTML = "Stay on the Street";
+    } else if (currentVal >= 20 && currentVal < 50) {
+        currentHome.src = "img/home/roommate.jpg";
+        output2.innerHTML = "Room Mates";
+    } else if (currentVal >= 50 && currentVal < 80) {
+        currentHome.src = "img/home/1bedroom.jpg";
+        output2.innerHTML = "1 Bedroom Apartment";
+    } else if (currentVal >= 80 && currentVal < 90) {
+        currentHome.src = "img/home/home.jpg";
+        output2.innerHTML = "Home";
+    } else {
+        currentHome.src = "img/home/mansion.jpg";
+        output2.innerHTML = "Mansion";
+    }
+
 }
