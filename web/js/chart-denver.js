@@ -12,17 +12,17 @@ let chart2Denver = new Chart(chart2elDenver, {
         {
           label: "Spending",
           backgroundColor: ["green","green","green","green","green","green","green","green","green","green","green","green"],
-          data: [60, 30, 50, 40, 60, 70, 50, 40, 50, 30, 60, 70]
+          data: [82, 82, 82, 82, 82, 82, 82, 82, 82, 82, 82, 82]
         },
         {
             label: "Spending",
             backgroundColor: ["red","red","red","red","red","red","red","red","red","red","red","red"],
-            data: [70, 50, 40, 90, 30, 50, 40, 60, 50, 30, 60, 70]
+            data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
         },
         {
             label: "Spending",
             backgroundColor: ["orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange"],
-            data: [50, 30, 60, 20, 30, 50, 40, 60, 70, 50, 40, 70]
+            data: [30, 50, 32, 37, 55, 40, 103, 83, 70, 50, 96, 83]
         },
       ]
     },
