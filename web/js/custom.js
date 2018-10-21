@@ -23,6 +23,7 @@ const navToggle = document.getElementById("nav-toggle");
 const pageWrap = document.getElementById("pagewrap");
 
 var sf = 45;
+var austin = 30;
 let chart2 = new Chart(chart2el, {
     type: 'bar',
     data: {
@@ -106,6 +107,7 @@ slider.oninput = function() {
         {
           $('#sfsaving').text(sfsaving + 1000);  
           sf = sf  - 1;
+          austin = sf  - 1;
         }
         lastval = currentVal;
     } else if (currentVal == 2) {
@@ -115,11 +117,13 @@ slider.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 1000);
           sf = sf  + 1; 
+          austin = sf  + 1;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 5000); 
          sf = sf  - 5;
+         austin = sf  - 5;
         }
         lastval = currentVal;
     } else if (currentVal == 3) {
@@ -129,11 +133,13 @@ slider.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 5000);
           sf = sf  + 5;
+          austin = sf  + 5;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 10000); 
          sf = sf  - 10;
+         austin = sf  - 10;
         }
         lastval = currentVal;
 
@@ -144,11 +150,13 @@ slider.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 10000);
           sf = sf  + 10;
+          austin = sf  + 10;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 20000); 
          sf = sf  - 20;
+         austin = sf  - 20;
         }
         lastval = currentVal;
     } else {
@@ -156,11 +164,15 @@ slider.oninput = function() {
         output.innerHTML = "Lamborghini";
         $('#sfsaving').text(sfsaving - 20000);
         sf = sf  + 20;
+        austin = sf  + 20;
         lastval = currentVal;
     }
     
     chart2.data.datasets[1].data = [parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf)];
     chart2.update();
+
+    chart2Austin.data.datasets[1].data = [austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin];
+    chart2Austin.update();
 }
 
 //home
@@ -182,6 +194,7 @@ slider2.oninput = function() {
         {
           $('#sfsaving').text(sfsaving + 25000);  
                     sf = sf  - 15;
+                    austin = austin  - 8;
 
         }
     } else if (currentVal == 2) {
@@ -191,11 +204,13 @@ slider2.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 25000);
           sf = sf  + 15;
+          austin = austin  + 8;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 15000); 
          sf = sf  - 15;
+         austin = austin  - 10;
         }
     } else if (currentVal == 3) {
         currentHome.src = "img/home/1bedroom.jpg";
@@ -204,11 +219,13 @@ slider2.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 15000);
           sf = sf  + 15;
+          austin = austin  + 10;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 25000); 
          sf = sf  - 25;
+         austin = austin  - 15;
         }
     } else if (currentVal == 4) {
         currentHome.src = "img/home/home.jpg";
@@ -217,22 +234,27 @@ slider2.oninput = function() {
         {
           $('#sfsaving').text(sfsaving - 25000);
           sf = sf  + 25;
+          austin = austin  + 15;
         }
         else
         {
          $('#sfsaving').text(sfsaving + 100000); 
          sf = sf  - 100;
+         austin = austin  - 50;
         }
     } else {
         currentHome.src = "img/home/mansion.jpg";
         output2.innerHTML = "Mansion";
         $('#sfsaving').text(sfsaving - 100000);
         sf = sf  + 100;
+        austin = austin  + 50;
     }
             lastval2 = currentVal;
 
     chart2.data.datasets[1].data = [parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf), parseInt(sf)];
     chart2.update();
 
+    chart2Austin.data.datasets[1].data = [austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin, austin];
+    chart2Austin.update();
 }
 
