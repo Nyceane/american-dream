@@ -1,0 +1,278 @@
+
+/* visualizations */
+
+ul.bargraph li.xaxis {
+  background: url(../img/bg_pattern.png);
+  height: 49px;
+}
+.bargraph {
+  list-style: none;
+  padding-top: 20px;
+  width: 550px;
+  padding-left: 0;
+}
+ul.bargraph li {
+  height: 35px;
+  color: white;
+  text-align: left;
+  font-style: italic;
+  font-weight:bolder;
+  font-size: 14px;
+  line-height: 35px;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+}
+ul.bargraph li.reddeep {
+  background: #ED1C24;
+  width:100%;
+}
+   
+ul.bargraph li.redpink {
+  background: #EF465B;
+  width:95%;
+}
+   
+ul.bargraph li.pink {
+  background: #E55A6B;
+  width:93%;
+}
+   
+ul.bargraph li.orangered {
+  background: #E28159;
+  width:85%;
+}
+   
+ul.bargraph li.orange {
+  background: #F99C1C;
+  width:75%;
+}
+   
+ul.bargraph li.yellow {
+  background: #F4D41E;
+  width:74%;
+}
+/*    
+ul.bargraph li.green {
+  background: #97B546;
+  width:55%;
+}
+   
+ul.bargraph li.greenbright {
+  background: #36B669;
+  width:40%;
+}
+   
+ul.bargraph li.greenblue {
+  background: #42BDA5;
+  width:30%;
+}
+   
+ul.bargraph li.blue {
+  background: #00AEEF;
+  width:20%;
+}
+   
+ul.bargraph li.xaxis {
+  background: url(../images/x-axis.jpg);
+  height: 49px;
+} */
+
+/* 
+.chart {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(2%, rgba(0, 0, 0, 0.1)), color-stop(2%, transparent));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+  background-size: 100% 50px;
+  background-position: left top;
+}
+.chart li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
+}
+.chart span {
+  margin: 0 1em;
+  display: block;
+  -webkit-animation: draw 1s ease-in-out;
+  animation: draw 1s ease-in-out;
+}
+.chart span.transunion {
+  background: #47A3C6;
+}
+.chart span.experian {
+  background: #0E3785;
+}
+.chart span.equifax {
+  background: #d1ecfa;
+}
+.chart span.average {
+  background: #2758A0;
+}
+.chart span:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 5px 1em 0;
+  display: block;
+  text-align: center;
+  content: attr(title);
+  word-wrap: break-word;
+}
+@-webkit-keyframes draw {
+  0% {
+    height: 0;
+  }
+}
+@keyframes draw {
+  0% {
+    height: 0;
+  }
+} */
+
+.visual-container {
+  position: relative;
+  display: block;
+}
+.pie-container {
+  position: relative;
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+}
+.pie-container:after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: 50;
+  width: 50%;
+  height: 50%;
+  color: white;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8) inset;
+}
+.pie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #AAA;
+  clip: rect(0px, 75px, 150px, 0px);
+  border-radius: 50%;
+}
+#utilities {
+  z-index: 10;
+  background-color: #73C2FB;
+  -webkit-transform: rotate(-80deg);
+  -ms-transform: rotate(-80deg);
+  transform: rotate(-80deg);
+}
+#debt {
+  z-index: 20;
+  background-color: #0074D9;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+#transportation {
+  z-index: 30;
+  background-color: #0080FE;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+#food {
+  z-index: 40;
+  background-color: #008ECC;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+#entertainment {
+  z-index: 41;
+  background-color: #0F52BA;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+#medical {
+  z-index: 42;
+  background-color: #95C8D8;
+  -webkit-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+}
+#insurance {
+  z-index: 43;
+  background-color: #4682B4;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#housing {
+  z-index: 44;
+  background-color: #6693F5;
+  -webkit-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  transform: rotate(100deg);
+}
+.stats {
+  float: left;
+  margin-left: 50px;
+}
+.stats ul {
+  list-style: none;
+}
+.stats li {
+  position: relative;
+  margin: 10px 0;
+}
+.stats li:before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: -25px;
+  top: 2px;
+  background-color: #AAA;
+}
+.stats li {
+  margin: 6px 0;
+}
+.stats li[data-name='Utilities']:before {
+  background-color: #73C2FB;
+}
+.stats li[data-name='Debt']:before {
+  background-color: #0074D9;
+}
+.stats li[data-name='Transportation']:before {
+  background-color: #0080FE;
+}
+.stats li[data-name='Food']:before {
+  background-color: #008ECC;
+}
+.stats li[data-name='Entertainment']:before {
+  background-color: #0F52BA;
+}
+.stats li[data-name='Medical']:before {
+  background-color: #95C8D8;
+}
+.stats li[data-name='Insurance']:before {
+  background-color: #4682B4;
+}
+.stats li[data-name='Housing']:before {
+  background-color: #6693F5;
+}
