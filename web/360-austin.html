@@ -33,31 +33,10 @@
 
 		<div id="container"></div>
 		<div id="info">
-			<span class="cityHtml">San Francisco, CA</span>
+			<span class="cityHtml">Austin, TX</span>
         </div>
 
 		<script src="https://threejs.org/build/three.js"></script>
-		<script>
-			var cityImage, cityName;
-			var cityHtml = document.getElementById("cityHtml");
-
-			function chooseCity(cityName) {
-				if (cityName == 'austin') {
-					cityHtml.innerHTML = "Austin, TX";
-					cityImage = 'https://i.imgur.com/0jUUlEO.jpg'; //austin
-				} else if (cityName == 'denver') {
-					cityHtml.innerHTML = "Denver, CO";
-					cityImage = 'https://i.imgur.com/uVHrcc0.jpg'; //
-				} else if (cityName == 'sanFrancisco') {
-					cityHtml.innerHTML = "San Francisco, CA";
-					cityImage = 'https://i.imgur.com/JiYSopR.jpg';
-				} else if (cityName == 'charlotte') {
-					cityHtml.innerHTML = "Charlotte, NC";
-					cityImage = 'https://i.imgur.com/oqCGCwe.jpg'; //charlotte
-				}
-			}
-		</script>
-
 		<script>
 
 			var camera, scene, renderer;
@@ -87,8 +66,8 @@
 				geometry.scale( - 1, 1, 1 );
 
 				var material = new THREE.MeshBasicMaterial( {
-					// map: new THREE.TextureLoader().load( 'https://threejs.org/examples/textures/2294472375_24a3b8ef46_o.jpg' )
-					map: new THREE.TextureLoader().load( cityImage )
+					map: new THREE.TextureLoader().load( 'https://i.imgur.com/0jUUlEO.jpg' )
+					// map: new THREE.TextureLoader().load( cityImage )
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );

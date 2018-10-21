@@ -29,9 +29,19 @@ let chart2 = new Chart(chart2el, {
       datasets: [
         {
           label: "Spending",
-          backgroundColor: ["#38bfc3", "#0F52BA","#007bff","#73C2FB", "#38bfc3", "#0F52BA","#007bff","#73C2FB", "#38bfc3", "#0F52BA","#007bff","#73C2FB"],
-          data: [20, 30, 50, 40, 60, 70, 50, 40, 50, 30, 60, 70]
-        }
+          backgroundColor: ["green","green","green","green","green","green","green","green","green","green","green","green"],
+          data: [60, 30, 50, 40, 60, 70, 50, 40, 50, 30, 60, 70]
+        },
+        {
+            label: "Spending",
+            backgroundColor: ["red","red","red","red","red","red","red","red","red","red","red","red"],
+            data: [70, 50, 40, 90, 30, 50, 40, 60, 50, 30, 60, 70]
+        },
+        {
+            label: "Spending",
+            backgroundColor: ["orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange","orange"],
+            data: [50, 30, 60, 20, 30, 50, 40, 60, 70, 50, 40, 70]
+        },
       ]
     },
     options: {
@@ -131,3 +141,4 @@ slider2.oninput = function() {
     }
 
 }
+
