@@ -1,0 +1,6 @@
+[submodule "yodlee-app"]
+	path = yodlee-app
+	url = https://github.com/amirhyoussefi/yodlee-app
+[submodule "synchrony-app"]
+	path = synchrony-app
+	url = https://github.com/amirhyoussefi/synchrony-app.git
